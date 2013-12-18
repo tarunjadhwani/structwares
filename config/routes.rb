@@ -1,4 +1,5 @@
 Structwares::Application.routes.draw do
+  get "form_details/new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   root 'static_pages#home'
