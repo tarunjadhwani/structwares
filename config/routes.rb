@@ -1,5 +1,8 @@
 Structwares::Application.routes.draw do
-  root "static_pages#home"
+  resources :users
+  root 'static_pages#home'
+  match '/trydemo', to: 'static_pages#trydemo', via: 'get'
+  match '/signup', to: 'users#new', via: 'get' 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
