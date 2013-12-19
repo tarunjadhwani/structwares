@@ -22,5 +22,6 @@ module SessionsHelper
 	def sign_out
 		self.current_user = nil
 		cookies.delete(:remember_token)
+		FormDetail.disable_button = false
 	end
 end
