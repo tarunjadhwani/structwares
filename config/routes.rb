@@ -2,7 +2,9 @@ Structwares::Application.routes.draw do
   get "form_details/new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :form_details
   root 'static_pages#home'
+  match '/formdetail',  to: 'form_details#new', via: 'get'
   match '/trydemo', to: 'static_pages#trydemo', via: 'get'
   match '/login', to: 'sessions#new', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'

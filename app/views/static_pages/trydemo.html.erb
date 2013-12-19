@@ -18,7 +18,11 @@
     <div class="thumbnail">
       <img data-src="holder.js/300x180" alt="">
       <h3 class='text-center'>Step 2</h3>
-      <p><a href="#" class="btn btn-large btn-success">Enter Form Details</a></p>
+      <% if disabled? %>
+      <p><a href="/formdetail" class="btn btn-large btn-success disabled">Enter Form Details</a></p>
+      <% else %>
+      <p><a href="/formdetail" class="btn btn-large btn-success">Enter Form Details</a></p>
+      <% end %>
     </div>
   </li>
   <li class="span4">

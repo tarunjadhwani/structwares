@@ -1,2 +1,49 @@
-<h1>FormDetails#new</h1>
-<p>Find me in app/views/form_details/new.html.erb</p>
+<h1 class="text-center">Enter Form Details</h1>
+
+<div class="row">
+	  <div class="span12">
+	<%= form_for(@formdetail) do |f| %>
+	
+	  	<div class="span4">
+			<%= f.label :name, "Name of Valuer:" %>
+			<%= f.text_field :name %>
+
+			<%= f.label :ref_no, "Ref No:" %>
+			<%= f.text_field :ref_no %>
+
+			<%= f.label :type_of_valuation, "Type Of Valuation:" %>
+			<%= f.text_field :type_of_valuation %>
+
+			<%= f.label :bank, "Bank:" %>
+			<%= f.select :bank, options_for_select(['City Bank', 'ICICI', 'Dena Bank', 'HDFC', 'State Bank of India']) %>
+
+			<%= f.label :valuation_rate, "Valuation Rate adopted:" %>
+			<%= f.text_field :valuation_rate %>
+
+			<%= f.label :no_of_owners, "No of owners:" %>
+			<%= f.select :no_of_owners, options_for_select(['1', '2', '3', '4', '5']) %>
+		</div>
+
+	  	<div class="span4 offset2">
+			<%= f.label :area_sq_mtrs, "Build up area:" %>
+			<%= f.text_field :area_sq_mtrs %>
+
+			<%= f.label :site_visit_date, "Site Visit Date:" %>
+			<%= f.date_select :site_visit_date %>
+
+			<%= f.label :location, "Location:"  %>
+			<%= f.text_field :location %>
+
+			<%= f.label :valuation_place, "Valuation Place:" %>
+			<%= f.select :valuation_place, options_for_select(['Ahmednagar', 'Pune', 'Mumbai']) %>
+
+
+			<%= f.label :ownership, "Ownership:" %>
+			<%= f.text_field :ownership %>
+		</div>
+		<div class="span4">
+			<%= f.submit "Submit Details", class: "btn btn-primary btn-large" %>
+		</div>
+		<% end %>
+  	</div>
+</div>
