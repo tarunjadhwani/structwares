@@ -18,7 +18,7 @@
     <div class="thumbnail">
       <img data-src="holder.js/300x180" alt="">
       <h3 class='text-center'>Step 2</h3>
-      <% if disabled? %>
+      <% if disabled? && signed_in? %>
       <p><a href="/formdetail" class="btn btn-large btn-success disabled">Enter Form Details</a></p>
       <% else %>
       <p><a href="/formdetail" class="btn btn-large btn-success">Enter Form Details</a></p>
