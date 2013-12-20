@@ -1,6 +1,3 @@
-<% if signed_in? %>
-
-
 <h1 class="text-center">Enter Form Details</h1>
 
 <div class="row">
@@ -26,7 +23,7 @@
 			<%= f.label :ownership, "Ownership:" %>
 			<%= f.select :ownership, options_for_select(['Individual Ownership', 'Joint Ownership']) %>
 
-			<%= f.label :area_type, "Area Type:"  %>
+			<%= f.label :area_type, "area_type:"  %>
 			<%= f.select :area_type, options_for_select(['High Class', 'Middle Class', 'Poor Class']) %>
 		</div>
 
@@ -44,7 +41,7 @@
 			<%= f.label :build_up_area, "Build up area:" %>
 			<%= f.text_field :build_up_area %>
 
-			<%= f.label :valuation_rate, "Valuation Rate:", placeholder: "per sq mtrs" %>
+			<%= f.label :valuation_rate, "valuation Rate:", placeholder: "per sq mtrs" %>
 			<%= f.text_field :valuation_rate %>
 
 			<%= f.label :valuation_place, "Valuation Place:" %>
@@ -52,19 +49,11 @@
 
 			<%= f.label :property_type, "Property Type:" %>
 			<%= f.select :property_type, options_for_select(['Residential', 'Commercial', 'Mixed', 'Industrial']) %> 
+
 		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="span12">
 		<div class="span4">
-			<%= f.submit "Submit Details", class: "btn btn-primary btn-large pull-left" %>
+			<%= f.submit "Submit Details", class: "btn btn-primary btn-large" %>
 		</div>
-	</div>
+		<% end %>
+  	</div>
 </div>
-<% end %>
-<% else %>
-  <script type="text/javascript">
-    window.location.href="/login"  // put your correct path in a string here
-  </script>
-<% end %>

@@ -11,23 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219124459) do
+ActiveRecord::Schema.define(version: 20131219121049) do
 
   create_table "form_details", force: true do |t|
-    t.string   "name"
-    t.string   "bank"
+    t.string   "owner_name"
+    t.string   "valuer_name"
+    t.date     "agreed_date"
     t.integer  "ref_no"
+    t.string   "bank"
+    t.string   "situated_at"
     t.string   "location"
-    t.string   "valuation_place"
-    t.string   "type_of_valuation"
-    t.integer  "flat_no"
+    t.integer  "valuation_place"
+    t.string   "area_type"
+    t.string   "property_type"
     t.date     "site_visit_date"
     t.string   "ownership"
     t.integer  "valuation_rate"
-    t.integer  "area_sq_mtrs"
+    t.integer  "build_up_area"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "no_of_owners"
   end
 
   create_table "users", force: true do |t|

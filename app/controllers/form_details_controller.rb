@@ -13,6 +13,10 @@ class FormDetailsController < ApplicationController
   	end
   end
 
+  def print
+    @formdetail = FormDetail.find(params[:id])
+  end
+
 private
 
   def formdetail_params

@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
+	has_many :form_details
 
 	validates :name, presence: true, length: { maximum: 60}
 	validates :company_name, presence: true
