@@ -14,7 +14,8 @@ class FormDetailsController < ApplicationController
   end
 
   def print
-    @formdetail = FormDetail.find(params[:id])
+    @user = User.find(params[:id])
+    @formdetail = @user.microposts.last
   end
 
 private

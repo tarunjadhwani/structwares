@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219121049) do
+ActiveRecord::Schema.define(version: 20131220132613) do
 
   create_table "form_details", force: true do |t|
     t.string   "owner_name"
@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(version: 20131219121049) do
     t.integer  "build_up_area"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "form_details", ["user_id"], name: "index_form_details_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
