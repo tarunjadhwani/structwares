@@ -15,8 +15,13 @@ class FormDetailsController < ApplicationController
   end
 
   def show
-    @formdetail = FormDetail.last
-    render layout: "admin_layout"
+    if signed_in?
+      @formdetail = FormDetail.last
+      render layout: "admin_layout"
+    else
+      redirect_to trydemo_path
+      flash[:error] = "Complete step 1 & 2 first!"
+    end
   end
 
   def download

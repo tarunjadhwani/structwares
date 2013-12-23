@@ -1,3 +1,21 @@
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item"><%= link_to image_tag("Pic1.png", alt: "Slider1"), '#' %></div>
+    <div class="item"><%= link_to image_tag("Pic2.png", alt: "Slider2"), '#' %></div>
+    <div class="item"><%= link_to image_tag("Pic3.png", alt: "Slider3"), '#' %></div>
+    <div class="item"><%= link_to image_tag("Pic4.png", alt: "Slider4"), '#' %></div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
 <div class="hero-unit">
   <h1 class="text-left">Welcome to Structwares!</h1>
   <p>We simplify civil engineer's life by generating correct reports with a cilck of a button. Don't believe? Try our demo application below.</p>
