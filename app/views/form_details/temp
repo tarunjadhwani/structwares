@@ -1,0 +1,19 @@
+id:	<%= @formdetail.id %> </br>
+user id:	<%= @formdetail.user_id %> </br>
+ref:	<%= @formdetail.ref_no %> </br>
+ownername:    <%= @formdetail.owner_name %></br>
+valuername:    <%= @formdetail.valuer_name %></br>
+agreed_date    <%= @formdetail.agreed_date %></br>
+bank:    <%= @formdetail.bank %></br>
+sitituated_at    <%= @formdetail.situated_at %></br>
+location:    <%= @formdetail.location %></br>
+value place:    <%= @formdetail.valuation_place %></br>
+area type:    <%= @formdetail.area_type %></br>
+property type:    <%= @formdetail.property_type %></br>
+site visit date:    <%= @formdetail.site_visit_date %></br>
+ownership    <%= @formdetail.ownership %></br>
+value rate    <%= @formdetail.valuation_rate %></br>
+build area    <%= @formdetail.build_up_area %></br>
+
+
+

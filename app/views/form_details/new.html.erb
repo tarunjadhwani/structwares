@@ -6,7 +6,7 @@
 <div class="row">
 	  <div class="span12">
 	<%= form_for(@formdetail) do |f| %>
-	
+	<%= render 'shared/error_messages', object: f.object %>      
 	  	<div class="span4">
 			<%= f.label :owner_name, "Name of Owner:" %>
 			<%= f.text_field :owner_name %>
@@ -35,10 +35,10 @@
 			<%= f.text_field :valuer_name %>
 
 			<%= f.label :agreed_date, "Date:" %>
-			<%= f.text_field :agreed_date , id: "datepicker", placeholder: "dd/mm/yyyy" %> 
+			<%= f.date_field :agreed_date, placeholder: "dd/mm/yyyy" %> 
 
 			<%= f.label :site_visit_date, "Site Visit Date:" %>
-			<%= f.text_field :site_visit_date , id: "datepicker", placeholder: "dd/mm/yyyy" %> 
+			<%= f.date_field :site_visit_date, placeholder: "dd/mm/yyyy" %> 
 
 
 			<%= f.label :build_up_area, "Build up area:" %>

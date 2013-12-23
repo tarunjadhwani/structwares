@@ -1,4 +1,5 @@
 class FormDetailsController < ApplicationController
+
   def new
   	@formdetail = FormDetail.new
   end
@@ -13,18 +14,19 @@ class FormDetailsController < ApplicationController
   	end
   end
 
-  def print
-    @user = User.find(params[:id])
-    @formdetail = @user.microposts.last
+  def show
+    @formdetail = FormDetail.last
+    render layout: "admin_layout"
   end
 
+  def download
+    send_file "#{RAILS_ROOT}/#{params[:file_name]}"
+  end
 private
 
   def formdetail_params
-  	params.require(:form_detail).permit(:name, :bank, :ref_no, :location, 
-  		:valuation_place, :type_of_valuation, :flat_no, :site_visit_date, 
-  		:ownership, :valuation_rate, :area_sq_mtrs, :no_of_owners)
+  	params.require(:form_detail).permit(:owner_name, :valuer_name,:agreed_date,
+      :ref_no, :bank, :situated_at, :location, :valuation_place, :area_type, :property_type,
+      :site_visit_date, :ownership, :valuation_rate, :build_up_area)
   end
-
 end
-

@@ -1,15 +1,15 @@
 Structwares::Application.routes.draw do
   get "form_details/new"
-  resources :users
+  resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
-  resources :form_details
+  resources :form_details, only: [:create]
   root 'static_pages#home'
-  match '/formdetail',  to: 'form_details#new', via: 'get'
-  match '/formprint',  to: 'form_details#print', via: 'get'
-  match '/trydemo', to: 'static_pages#trydemo', via: 'get'
-  match '/login', to: 'sessions#new', via: 'get'
-  match '/logout', to: 'sessions#destroy', via: 'delete'
-  match '/signup', to: 'users#new', via: 'get' 
+  match '/formdetail',  to: 'form_details#new'    , via: 'get'
+  match '/formshow' ,  to: 'form_details#show'  , via: 'get'
+  match '/trydemo'   ,  to: 'static_pages#trydemo', via: 'get'
+  match '/login'     ,  to: 'sessions#new'        , via: 'get'
+  match '/logout'    ,  to: 'sessions#destroy'    , via: 'delete'
+  match '/signup'    ,  to: 'users#new'           , via: 'get' 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
