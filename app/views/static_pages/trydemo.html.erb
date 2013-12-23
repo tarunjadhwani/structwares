@@ -8,10 +8,11 @@
       <img data-src="holder.js/300x180" alt="">
       <h3 class='text-center'>Step 1</h3>
       <% if signed_in? %>
-      <p><a href="/login" class="btn btn-large btn-success disabled">Log in/Sign up</a></p>
+      <p><a href="#" class="btn btn-large btn-success disabled">Log in as user</a></p>
       <% else %>
-      <p><a href="/login" class="btn btn-large btn-success">Log in/Sign up</a></p>
+      <p><a href="/login" class="btn btn-large btn-success">Log in  as user</a></p>
       <% end %>
+      <h5 class='text-center'><%= link_to "Signup as new user", signup_path %></h5>
     </div>
   </li>
   <li class="span4">
@@ -19,10 +20,11 @@
       <img data-src="holder.js/300x180" alt="">
       <h3 class='text-center'>Step 2</h3>
       <% if disabled? && signed_in? %>
-      <p><a href="/formdetail" class="btn btn-large btn-success disabled">Enter Form Details</a></p>
+      <p><a href="#" class="btn btn-large btn-success disabled">Enter Form Details</a></p>
       <% else %>
       <p><a href="/formdetail" class="btn btn-large btn-success">Enter Form Details</a></p>
       <% end %>
+      <h5 class='text-center'><%= link_to "Enter new details", formdetail_path %></h5>
     </div>
   </li>
   <li class="span4">
@@ -30,6 +32,7 @@
       <img data-src="holder.js/300x180" alt="">
       <h3 class='text-center'>Step 3</h3>
       <p><a href="/formshow" class="btn btn-large btn-success">Generate Report</a></p>
+      <h5 class='text-center'><%= link_to "Download in pdf", formdetail_path %></h5>
     </div>
   </li>
 </ul>
