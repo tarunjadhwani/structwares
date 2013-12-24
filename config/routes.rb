@@ -8,6 +8,8 @@ Structwares::Application.routes.draw do
   match '/formdetail',  to: 'form_details#new'    , via: 'get'
   match '/formshow' ,  to: 'form_details#show'  , via: 'get'
   match '/trydemo'   ,  to: 'static_pages#trydemo', via: 'get'
+  match '/about'   ,  to: 'static_pages#about', via: 'get'
+  match '/clients'   ,  to: 'static_pages#clients', via: 'get'
   match '/login'     ,  to: 'sessions#new'        , via: 'get'
   match '/logout'    ,  to: 'sessions#destroy'    , via: 'delete'
   match '/signup'    ,  to: 'users#new'           , via: 'get' 

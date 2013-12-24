@@ -1,26 +1,46 @@
-<h1 class="text-center">Fill in for furter Queries</h1>
+
 
 <div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@message) do |f| %>
-    <%= render 'shared/error_messages', object: f.object %> 
-   
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-      
-      <%= f.label :contact_no %>
-      <%= f.text_field :contact_no %>
+  <section class="span5">
+  <h1 class="text-left">Addresses:</h1>
+    <address>
+      <strong>Structwares, Pune</strong><br>
+      2nd Floor, Rahul Complex,<br>
+      Besides Kalyan Jewelers,<br>
+      Nal Stop, Pune.<br>
+      <abbr title="Phone">P:</abbr> +91-9764756456
+    </address>
+     
+    <address>
+      <strong>Structwares, Ahmednagar </strong><br>
+      47/31, 1st Floor,<br>
+      Above Raja tea Corp, Fulsonder Chowk<br>
+      Maliwada, Ahmednagar<br>
+      <abbr title="Phone">P:</abbr> +91-9764756456
+    </address>
+  </section>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+  <section class="span7">
+    <h1 class="text-left">Fill in for furter Queries</h1>
+        <%= form_for(@message) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %> 
+       
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+          
+          <%= f.label :contact_no %>
+          <%= f.text_field :contact_no %>
 
-      <%= f.label :subject %>
-      <%= f.text_field :subject %>
+          <%= f.label :email %>
+          <%= f.text_field :email %>
 
-      <%= f.label :body %>
-      <%= f.text_area :body %>
+          <%= f.label :subject %>
+          <%= f.text_field :subject %>
 
-      <%= f.submit "Send", class: "btn btn-large btn-primary" %>
-    <% end %>
-  </div>
+          <%= f.label :body %>
+          <%= f.text_area :body %>
+
+          <%= f.submit "Send", class: "btn btn-large btn-primary" %>
+        <% end %>
+  </section>
 </div>
