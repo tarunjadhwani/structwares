@@ -1,9 +1,9 @@
 class NotificationsMailer < ActionMailer::Base
-  default :from => "noreply@youdomain.dev"
-  default :to => "you@youremail.dev"
+  default :from => "tarunjadhwani@gmail.com"
+  default :to => "tarunjadhwani@gmail.com"
 
   def new_message(message)
     @message = message
-    mail(:subject => "[YourWebsite.tld] #{message.subject}")
+    mail(:subject => "[structwares.com] #{message.subject}")
   end
 end
