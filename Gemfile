@@ -10,6 +10,9 @@ gem "numbers_and_words", "~> 0.10.0"
 #gem 'wkhtmltopdf-binary'
 #gem 'wicked_pdf'
 
+
+gem 'capistrano', '~> 3.0.1'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 	gem 'sqlite3', '1.3.7'
