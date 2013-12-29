@@ -3,6 +3,7 @@ class FormDetailsController < ApplicationController
   def new
   	@formdetail = FormDetail.new
   end
+  
   def create
   	@formdetail = FormDetail.new(formdetail_params)
   	if @formdetail.save
@@ -17,7 +18,17 @@ class FormDetailsController < ApplicationController
   def show
     if signed_in?
       @formdetail = FormDetail.last
-      render layout: "admin_layout"
+      respond_to do |format|
+        format.html do 
+          render layout: "admin_layout"
+        end
+        format.pdf do
+          render :pdf => "#{@formdetail.id}",
+          :layout => "admin_layout",
+          :template => "/form_details/show.html.erb"
+        #  :save_to_file => Rails.root.join('pdfs', "#{@formdetail.id}.pdf")
+        end
+      end
     else
       redirect_to trydemo_path
       flash[:error] = "Complete step 1 & 2 first!"

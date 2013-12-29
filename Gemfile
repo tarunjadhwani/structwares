@@ -7,8 +7,8 @@ gem 'bootstrap-sass', '2.3.2'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'bootstrap-datepicker-rails'
 gem "numbers_and_words", "~> 0.10.0"
-#gem 'wkhtmltopdf-binary'
-#gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
 
 
 gem 'capistrano', '~> 3.0.1'
