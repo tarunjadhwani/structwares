@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2'
@@ -18,7 +19,7 @@ group :development, :test do
 	gem 'guard-spork', '1.5.0'
 end
 group :test do
-#  gem 'capybara', github: 'jnicklas/capybara'
+  gem 'capybara', github: 'jnicklas/capybara'
 end
 
 group :assets do
