@@ -18,7 +18,7 @@ group :development, :test do
 	gem 'guard-spork', '1.5.0'
 end
 group :test do
-  gem 'capybara', github: 'jnicklas/capybara'
+#  gem 'capybara', github: 'jnicklas/capybara'
 end
 
 group :assets do
