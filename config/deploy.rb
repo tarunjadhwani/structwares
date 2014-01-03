@@ -2,7 +2,7 @@ set :application, 'structwares'
 set :repository, 'git@github.com:tarunjadhwani/structwares.git'
 set :scm, :git
 set :deploy_via, :remote_cache
-set :deploy_to, "home/equicomi/test_app"
+set :deploy_to, "test_app"
 set :use_sudo, false
 set :branch, 'master'
 default_run_options[:pty] = true
