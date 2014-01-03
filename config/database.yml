@@ -33,7 +33,7 @@ production:
 
   #adapter: mysql2
   #encoding: utf8
-  #database: equicomi_prod1
+  #database: equicomi_test
   #pool: 5
-  #username: equicomi_prod1
-  #password: Password@123
+  #username: equicomi_test
+  #password: password123
