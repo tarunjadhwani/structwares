@@ -3,7 +3,7 @@ set :repository, 'git@github.com:tarunjadhwani/structwares.git'
 set :scm, :git
 set :deploy_via, :remote_cache
 set :deploy_to, "prod_app"
-set :use_sudo, false
+set :use_sudo, true
 set :branch, 'master'
 default_run_options[:pty] = true
 
