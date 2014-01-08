@@ -2,16 +2,16 @@ set :application, 'structwares'
 set :repository, 'git@github.com:tarunjadhwani/structwares.git'
 set :scm, :git
 set :deploy_via, :remote_cache
-set :deploy_to, "test_app"
+set :deploy_to, "prod_app"
 set :use_sudo, false
 set :branch, 'master'
 default_run_options[:pty] = true
 
 set :user, "equicomi"
 
-role :web, "test.structwares.com"
-role :app, "test.structwares.com"
-role :db, "test.structwares.com", :primary => true
+role :web, "structwares.com"
+role :app, "structwares.com"
+role :db, "structwares.com", :primary => true
 
 after 'deploy:update_code', 'deploy:migrate'
 

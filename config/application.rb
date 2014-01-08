@@ -23,8 +23,8 @@ module Structwares
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "gmail.com",
-      :user_name            => "tarunjadhwani@gmail.com",
-      :password             => "Blackberry@123",
+      :user_name            => "structwares@gmail.com",
+      :password             => "contactform@123",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
